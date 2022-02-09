@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Navigation() {
+const Navigation = (props) => {
   return (
     <div className="navigation">
       <nav className="navbar navbar-expand navbar-dark bg-dark">
@@ -38,6 +38,6 @@ function Navigation() {
       </nav>
     </div>
   );
-}
+};
 
 export default Navigation;
