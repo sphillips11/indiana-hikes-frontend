@@ -1,7 +1,37 @@
-import React from "react";
+import axios from "axios";
+import { React, useEffect, useState } from "react";
+import { useParams } from "react-router";
 
-const Map = (props) => {
-  return <div>Map</div>;
+const Map = () => {
+  const { parkName } = useParams();
+  const title = `${parkName}-map`;
+
+  const [currentParkMap, setCurrentParkMap] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`https://ih-backend.herokuapp.com/${parkName}/map`)
+      .then((response) => {
+        setCurrentParkMap(response.data.map);
+      })
+      .catch((error) => {
+        console.log(error);
+        // alert("Oops! Something went wrong. Please try again later.");
+      });
+  }, []);
+
+  return (
+    <div className="container-fluid h-100">
+      <iframe
+        title={title}
+        src={`${currentParkMap}#view=fitH`}
+        frameBorder="0"
+        scrolling="auto"
+        height="100%"
+        width="100%"
+      ></iframe>
+    </div>
+  );
 };
 
 export default Map;

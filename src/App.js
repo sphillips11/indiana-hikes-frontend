@@ -43,9 +43,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Parks parksData={parksData} />} />
-        <Route path="parks/:parkName" element={<ParkDetails />}>
-          <Route path="map" element={<Map />} />
-        </Route>
+        <Route path="parks/:parkName" element={<ParkDetails />} />
+        <Route path="parks/:parkName/map" element={<Map />} />
+        {/* </Route> */}
         {/* <Route
           path="signup"
           element={

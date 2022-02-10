@@ -38,7 +38,9 @@ const ParkDetails = () => {
       <section className="container">
         <ParkInfo currentPark={currentPark} />
       </section>
-      <Link></Link>
+      <Link to={"map"} target="_blank">
+        Map
+      </Link>
       <section className="container">
         <TrailsList currentTrails={currentTrails} />
       </section>
