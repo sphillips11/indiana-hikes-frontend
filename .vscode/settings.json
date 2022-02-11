@@ -6,5 +6,10 @@
     },
     "cSpell.ignorePaths": [
         "yarn.lock",
+    ],
+    "cSpell.words": [
+        "labelledby",
+        "noopener",
+        "noreferrer"
     ]
 }

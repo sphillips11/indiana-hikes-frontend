@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import { Link } from "react-router-dom";
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 import ParkInfo from "../Components/ParkInfo";
@@ -35,13 +34,10 @@ const ParkDetails = () => {
 
   return (
     <div>
-      <section className="container">
+      <section className="container.fluid">
         <ParkInfo currentPark={currentPark} />
       </section>
-      <Link to={"map"} target="_blank">
-        Map
-      </Link>
-      <section className="container">
+      <section className="container.fluid bg-primary py-4">
         <TrailsList currentTrails={currentTrails} />
       </section>
     </div>
