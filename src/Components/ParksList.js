@@ -4,6 +4,10 @@ import ParkSummary from "./ParkSummary";
 const ParksList = (props) => {
   const parks = props.parksData;
 
+  parks.sort(function (a, b) {
+    return a.name.localeCompare(b.name);
+  });
+
   const ParksList = parks.map((park) => {
     return <ParkSummary key={park.id} parkData={park} />;
   });
