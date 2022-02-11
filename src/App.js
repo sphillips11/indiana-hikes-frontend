@@ -1,6 +1,4 @@
 import "./App.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import {
   BrowserRouter as Router,
   Routes,
@@ -21,28 +19,13 @@ import Login from "./Pages/Login";
 import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
-  const [parksData, setParksData] = useState([]);
   // const [loggedIn, setLoggedIn] = useState(false);
   // const [currentHiker, setCurrentHiker] = useState(????);
-
-  useEffect(() => {
-    axios
-      .get("https://ih-backend.herokuapp.com")
-      .then((response) => {
-        console.log(response);
-        setParksData(response.data);
-      })
-      .catch((error) => {
-        console.log(error);
-        // alert("Oops! Something went wrong. Please try again later.");
-        console.log(parksData);
-      });
-  }, []);
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Parks parksData={parksData} />} />
+        <Route path="/" element={<Parks />} />
         <Route path="parks/:parkName" element={<ParkDetails />} />
         <Route path="parks/:parkName/map" element={<Map />} />
         {/* </Route> */}
