@@ -1,7 +1,8 @@
 import React from "react";
-import ParksList from "../Components/ParksList";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ParksList from "../Components/ParksList";
+import Header from "../Components/Header";
 
 const Parks = () => {
   const [parksData, setParksData] = useState([]);
@@ -21,7 +22,8 @@ const Parks = () => {
   }, []);
 
   return (
-    <div className="bg-light">
+    <div>
+      <Header />
       <h1 className="text-center">Indiana State Parks</h1>
       <section className="container">
         <ParksList parksData={parksData} />

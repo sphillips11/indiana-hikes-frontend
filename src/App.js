@@ -9,7 +9,7 @@ import {
 import Parks from "./Pages/Parks";
 import ParkDetails from "./Pages/ParkDetails";
 import Map from "./Pages/Map";
-// import SignUp from "./Pages/SignUp";
+import SignUp from "./Pages/SignUp";
 import Login from "./Pages/Login";
 // import HikerInfo from "./Pages/HikerInfo";
 // import Hikes from "./Pages/Hikes";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Parks />} />
         <Route path="parks/:parkName" element={<ParkDetails />} />
         <Route path="parks/:parkName/map" element={<Map />} />
-        {/* </Route> */}
+        <Route path="signup" element={<SignUp />} />
         {/* <Route
           path="signup"
           element={
