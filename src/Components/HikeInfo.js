@@ -12,14 +12,18 @@ const HikeInfo = (props) => {
 
   return (
     <Accordion>
-      <Accordion.Item className="container" eventKey="{hike.id}">
-        <Accordion.Header className="row">
-          <div className="col-md-8 fw-bold">
-            {formattedDate} - {hike.park_id.name}
-          </div>
-          <div className="col ms-auto">
-            You hiked:&nbsp;
-            {hike.distance} {hike.distance === "1.0" ? "mile" : "miles"}
+      <Accordion.Item eventKey="{hike.id}">
+        <Accordion.Header>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 col-lg-9 col-xl-10 fw-bold">
+                {formattedDate} - {hike.park_id.name}
+              </div>
+              <div className="col ms-auto">
+                You hiked:&nbsp;
+                {hike.distance} {hike.distance === "1.0" ? "mile" : "miles"}
+              </div>
+            </div>
           </div>
         </Accordion.Header>
         <Accordion.Body>
