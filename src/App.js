@@ -15,6 +15,7 @@ import PasswordReset from "./Pages/PasswordReset";
 import HikerDetails from "./Pages/HikerDetails";
 import Hikes from "./Pages/Hikes";
 // import EditHike from "./Pages/EditHike";
+import Welcome from "./Pages/Welcome";
 import RecordHike from "./Pages/RecordHike";
 import ErrorPage from "./Pages/ErrorPage";
 import Header from "./Components/Header";
@@ -83,6 +84,7 @@ function App() {
             )
           }
         />
+        <Route path="/welcome" element={<Welcome />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
