@@ -11,8 +11,8 @@ import ParkDetails from "./Pages/ParkDetails";
 import Map from "./Pages/Map";
 import SignUp from "./Pages/SignUp";
 import Login from "./Pages/Login";
-// import HikerInfo from "./Pages/HikerInfo";
-// import Hikes from "./Pages/Hikes";
+import HikerDetails from "./Pages/HikerDetails";
+import Hikes from "./Pages/Hikes";
 // import HikeDetails from "./Pages/HikeDetails";
 // import EditHike from "./Pages/EditHike";
 // import RecordHike from "./Pages/RecordHike";
@@ -36,8 +36,10 @@ function App() {
           }
         /> */}
         <Route path="login" element={<Login />} />
+        <Route path="hikers/:hikerId" element={<HikerDetails />} />
+        <Route path="hikers/:hikerId/hikes" element={<Hikes />} />
         {/* <Route
-          path="hiker/:hikerId"
+          path="hikers/:hikerId"
           element={loggedIn ? <HikerInfo /> : <Navigate replace to="login" />}
         >
           <Route
@@ -45,11 +47,14 @@ function App() {
             element={loggedIn ? <Hikes /> : <Navigate replace to="login" />}
           >
             <Route>
-              path=":hikeId"
-              element={
-                loggedIn ? <HikeDetails /> : <Navigate replace to="login" />
-              }
-              <Route path="edit" element={loggedIn ? <EditHike /> : <Navigate replace to="login" />}/>
+              path=":hikeId" element=
+              {loggedIn ? <HikeDetails /> : <Navigate replace to="login" />}
+              <Route
+                path="edit"
+                element={
+                  loggedIn ? <EditHike /> : <Navigate replace to="login" />
+                }
+              />
             </Route>
           </Route>
         </Route>

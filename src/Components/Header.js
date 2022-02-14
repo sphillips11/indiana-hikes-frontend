@@ -29,7 +29,7 @@ const Header = (props) => {
                 Profile
               </NavDropdown.Item>
               <NavDropdown.Item href="/hikers/{hiker.id}/hikes">
-                Hikes
+                Your Hikes
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/logout">Logout</NavDropdown.Item>

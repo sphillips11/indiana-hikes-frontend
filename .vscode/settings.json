@@ -8,6 +8,8 @@
         "yarn.lock",
     ],
     "cSpell.words": [
+        "fontawesome",
+        "fortawesome",
         "labelledby",
         "noopener",
         "noreferrer"
