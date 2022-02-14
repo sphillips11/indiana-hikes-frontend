@@ -11,6 +11,7 @@ import ParkDetails from "./Pages/ParkDetails";
 import Map from "./Pages/Map";
 import SignUp from "./Pages/SignUp";
 import Login from "./Pages/Login";
+import PasswordReset from "./Pages/PasswordReset";
 import HikerDetails from "./Pages/HikerDetails";
 import Hikes from "./Pages/Hikes";
 // import HikeDetails from "./Pages/HikeDetails";
@@ -38,6 +39,7 @@ function App() {
           }
         /> */}
         <Route path="login" element={<Login />} />
+        <Route path="reset" element={<PasswordReset />} />
         <Route path="hikers/:hikerId" element={<HikerDetails />} />
         <Route path="hikers/:hikerId/hikes" element={<Hikes />} />
         {/* <Route
