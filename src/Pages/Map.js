@@ -1,6 +1,7 @@
 import axios from "axios";
 import { React, useEffect, useState } from "react";
 import { useParams } from "react-router";
+import "./Map.css";
 
 const Map = () => {
   const { parkName } = useParams();
@@ -21,10 +22,10 @@ const Map = () => {
         console.log(error);
         // alert("Oops! Something went wrong. Please try again later.");
       });
-  }, []);
+  }, [parkName]);
 
   return (
-    <div className="container-fluid h-100">
+    <div className="container-fluid map-div">
       <iframe
         title={title}
         src={`${currentParkMap}#view=fitH`}
