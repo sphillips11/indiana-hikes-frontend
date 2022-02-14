@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const HikerInfo = (props) => {
   const hiker = props.currentHiker;
@@ -18,10 +18,10 @@ const HikerInfo = (props) => {
         <p>Name: {hiker.name}</p>
         <p>Username: {hiker.username}</p>
         <p>Email: {hiker.email}</p>
+        <Button href="/reset" variant="danger">
+          Reset your password
+        </Button>
       </div>
-      <p>
-        <Link to={"hikes"}>See your hikes</Link>
-      </p>
     </div>
   );
 };

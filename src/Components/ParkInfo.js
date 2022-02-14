@@ -10,7 +10,6 @@ const ParkInfo = (props) => {
   );
   const mapsSearchUrl =
     "https://www.google.com/maps/search/?api=1&query=" + encodedAddress;
-  console.log(mapsSearchUrl);
 
   return (
     <div>
@@ -52,10 +51,12 @@ const ParkInfo = (props) => {
         <h5>Description</h5>
         <p>{park.description}</p>
       </section>
-      <section className="container.fluid bg-warning p-5">
-        <h5>{park.challenge_name}</h5>
-        <p>{park.challenge_description}</p>
-      </section>
+      {park.challenge && (
+        <section className="container.fluid bg-warning p-5">
+          <h5>{park.challenge_name}</h5>
+          <p>{park.challenge_description}</p>
+        </section>
+      )}
     </div>
   );
 };

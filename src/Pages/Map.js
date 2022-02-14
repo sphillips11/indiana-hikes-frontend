@@ -5,8 +5,11 @@ import { useParams } from "react-router";
 const Map = () => {
   const { parkName } = useParams();
   const title = `${parkName}-map`;
-
   const [currentParkMap, setCurrentParkMap] = useState(null);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     axios

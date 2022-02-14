@@ -19,7 +19,7 @@ const HikeInfo = (props) => {
           </div>
           <div className="col ms-auto">
             You hiked:&nbsp;
-            {hike.distance} {hike.distance === "1" ? "mile" : "miles"}
+            {hike.distance} {hike.distance === "1.0" ? "mile" : "miles"}
           </div>
         </Accordion.Header>
         <Accordion.Body>

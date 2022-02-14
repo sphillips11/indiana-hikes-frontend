@@ -1,10 +1,13 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import { React, useEffect, useState } from "react";
 import axios from "axios";
 import ParksList from "../Components/ParksList";
 
 const Parks = () => {
   const [parksData, setParksData] = useState([]);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     axios

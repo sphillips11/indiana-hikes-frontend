@@ -5,8 +5,11 @@ import HikesList from "../Components/HikesList";
 
 const Hikes = () => {
   const { hikerId } = useParams();
-
   const [hikesList, setHikesList] = useState([]);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     axios
@@ -22,7 +25,7 @@ const Hikes = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-light">
       <br />
       <br />
       <h1 className="text-center">Your Hikes</h1>

@@ -3,8 +3,7 @@ import { Accordion } from "react-bootstrap";
 
 const TrailInfo = (props) => {
   const trail = props.trailData;
-  console.log(`trail-${trail.id}`);
-  console.log(`description-${trail.id}`);
+
   return (
     <Accordion>
       <Accordion.Item className="container" eventKey="{trail.id}">

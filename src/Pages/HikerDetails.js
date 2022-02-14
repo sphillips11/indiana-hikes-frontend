@@ -5,8 +5,11 @@ import HikerInfo from "../Components/HikerInfo";
 
 const HikerDetails = () => {
   const { hikerId } = useParams();
-
   const [currentHiker, setCurrentHiker] = useState({});
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     axios

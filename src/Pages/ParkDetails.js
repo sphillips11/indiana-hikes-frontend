@@ -6,9 +6,12 @@ import TrailsList from "../Components/TrailsList";
 
 const ParkDetails = () => {
   const { parkName } = useParams();
-
   const [currentPark, setCurrentPark] = useState({});
   const [currentTrails, setCurrentTrails] = useState([]);
+
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
 
   useEffect(() => {
     axios
@@ -18,7 +21,7 @@ const ParkDetails = () => {
         axios
           .get(`https://ih-backend.herokuapp.com/trails/${response.data.id}`)
           .then((response) => {
-            console.log(response);
+            // console.log(response);
             setCurrentTrails(response.data);
           })
           .catch((error) => {
