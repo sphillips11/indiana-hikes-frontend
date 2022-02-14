@@ -1,7 +1,6 @@
 import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
 import axios from "axios";
-import Header from "../Components/Header";
 import HikesList from "../Components/HikesList";
 
 const Hikes = () => {
@@ -24,7 +23,6 @@ const Hikes = () => {
 
   return (
     <div>
-      <Header />
       <br />
       <br />
       <h1 className="text-center">Your Hikes</h1>

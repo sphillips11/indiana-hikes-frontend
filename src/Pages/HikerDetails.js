@@ -2,7 +2,6 @@ import { useParams } from "react-router";
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 import HikerInfo from "../Components/HikerInfo";
-import Header from "../Components/Header";
 
 const HikerDetails = () => {
   const { hikerId } = useParams();
@@ -24,7 +23,6 @@ const HikerDetails = () => {
 
   return (
     <div>
-      <Header />
       <HikerInfo currentHiker={currentHiker} />
     </div>
   );

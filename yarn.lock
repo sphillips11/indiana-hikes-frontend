@@ -10,6 +10,11 @@
     "@jridgewell/trace-mapping" "^0.2.2"
     sourcemap-codec "1.4.8"
 
+"@anymod/core@^0.1.51":
+  version "0.1.51"
+  resolved "https://registry.yarnpkg.com/@anymod/core/-/core-0.1.51.tgz#683614c5331a8b51aaa7418c8f196e74bbadcd34"
+  integrity sha512-4hyrYhnL9VDamXI9YX8YkR3eeuhuyNoyL/LxSBHvyc2D9GE9CKcplTXOjlWPglScEmmnVatHS+Mxd/NX2zIdSw==
+
 "@apideck/better-ajv-errors@^0.3.1":
   version "0.3.2"
   resolved "https://registry.npmjs.org/@apideck/better-ajv-errors/-/better-ajv-errors-0.3.2.tgz"
@@ -2069,6 +2074,22 @@
     "@typescript-eslint/types" "5.10.2"
     eslint-visitor-keys "^3.0.0"
 
+"@userfront/core@^0.2.33":
+  version "0.2.41"
+  resolved "https://registry.yarnpkg.com/@userfront/core/-/core-0.2.41.tgz#a10b29a7473354d40cc7e7f9c9999a2893066748"
+  integrity sha512-Mt2hkUPNqwUCMZ5/fzv7PDY9cpXxRSx/lXOHpCDe8jzBUmnc5L2i/J4dAz7+uwPWORIBC8J8ejmqaxOt6CSwsQ==
+  dependencies:
+    axios "^0.21.1"
+    js-cookie "^2.2.1"
+
+"@userfront/react@^0.2.22":
+  version "0.2.22"
+  resolved "https://registry.yarnpkg.com/@userfront/react/-/react-0.2.22.tgz#62f46025ad9290a64a2bd231e52660d1468cc87a"
+  integrity sha512-Ct0qHdqEP90OPRLp4d4+c4Ko0/GYLRmgIPkYN/vF62fk0Dse6NyNwH3DuRGwJFj4DB6ueiBjSnHjqe1QYvi7Tg==
+  dependencies:
+    "@anymod/core" "^0.1.51"
+    "@userfront/core" "^0.2.33"
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.npmjs.org/@webassemblyjs/ast/-/ast-1.11.1.tgz"
@@ -2498,6 +2519,13 @@ axe-core@^4.3.5:
   version "4.4.0"
   resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.4.0.tgz"
   integrity sha512-btWy2rze3NnxSSxb7LtNhPYYFrRoFBfjiGzmSc/5Hu47wApO2KNXjP/w7Nv2Uz/Fyr/pfEiwOkcXhDxu0jz5FA==
+
+axios@^0.21.1:
+  version "0.21.4"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
+  integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
+  dependencies:
+    follow-redirects "^1.14.0"
 
 axios@^0.25.0:
   version "0.25.0"
@@ -4311,6 +4339,11 @@ follow-redirects@^1.0.0, follow-redirects@^1.14.7:
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.7.tgz"
   integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
 
+follow-redirects@^1.14.0:
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
+
 fork-ts-checker-webpack-plugin@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.5.0.tgz"
@@ -5520,6 +5553,11 @@ jest@^27.4.3:
     "@jest/core" "^27.4.7"
     import-local "^3.0.2"
     jest-cli "^27.4.7"
+
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

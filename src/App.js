@@ -17,6 +17,7 @@ import Hikes from "./Pages/Hikes";
 // import EditHike from "./Pages/EditHike";
 // import RecordHike from "./Pages/RecordHike";
 import ErrorPage from "./Pages/ErrorPage";
+import Header from "./Components/Header";
 
 function App() {
   // const [loggedIn, setLoggedIn] = useState(false);
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Parks />} />
         <Route path="parks/:parkName" element={<ParkDetails />} />

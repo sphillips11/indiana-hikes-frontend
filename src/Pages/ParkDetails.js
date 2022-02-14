@@ -3,7 +3,6 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import ParkInfo from "../Components/ParkInfo";
 import TrailsList from "../Components/TrailsList";
-import Header from "../Components/Header";
 
 const ParkDetails = () => {
   const { parkName } = useParams();
@@ -35,7 +34,6 @@ const ParkDetails = () => {
 
   return (
     <div>
-      <Header />
       <section className="container.fluid">
         <ParkInfo currentPark={currentPark} />
       </section>
