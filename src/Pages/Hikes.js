@@ -13,7 +13,7 @@ const Hikes = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://ih-backend.herokuapp.com/hikers/${currentHiker.userId}/hikes`
+        `${process.env.REACT_APP_BACKEND_URL}/hikers/${currentHiker.userId}/hikes`
       )
       .then((response) => {
         setHikesList(response.data);

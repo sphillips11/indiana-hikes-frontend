@@ -14,7 +14,7 @@ const Map = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ih-backend.herokuapp.com/${parkName}/map`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/${parkName}/map`)
       .then((response) => {
         setCurrentParkMap(response.data.map);
       })

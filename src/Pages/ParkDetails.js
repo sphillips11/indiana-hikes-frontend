@@ -15,11 +15,13 @@ const ParkDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://ih-backend.herokuapp.com/${parkName}`)
+      .get(`${process.env.REACT_APP_BACKEND_URL}/${parkName}`)
       .then((response) => {
         setCurrentPark(response.data);
         axios
-          .get(`https://ih-backend.herokuapp.com/trails/${response.data.id}`)
+          .get(
+            `${process.env.REACT_APP_BACKEND_URL}/trails/${response.data.id}`
+          )
           .then((response) => {
             // console.log(response);
             setCurrentTrails(response.data);

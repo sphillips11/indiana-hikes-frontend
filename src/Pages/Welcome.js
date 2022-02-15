@@ -13,7 +13,7 @@ const Welcome = () => {
 
   useEffect(() => {
     axios
-      .post("https://ih-backend.herokuapp.com/hikers/", newHiker)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/hikers/`, newHiker)
       .then((response) => {
         console.log("Response:", response.data);
       })
