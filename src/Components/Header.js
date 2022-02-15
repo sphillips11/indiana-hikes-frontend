@@ -13,7 +13,7 @@ const Header = (props) => {
         <Navbar.Brand href="/" className="p-0 mb-0 mt-1">
           <img
             className="logo"
-            src="images/logo_draft.png"
+            src="/images/logo_draft.png"
             alt="Indiana Hikes logo"
           />
         </Navbar.Brand>
@@ -30,7 +30,7 @@ const Header = (props) => {
                     <span>
                       <img
                         className="icon"
-                        src="images/hiker_icon.png"
+                        src="/images/hiker_icon.png"
                         alt="Hiker icon"
                       />{" "}
                       {currentHiker.name}
@@ -38,12 +38,8 @@ const Header = (props) => {
                   }
                   id="basic-nav-dropdown"
                 >
-                  <NavDropdown.Item href={`/hikers/${currentHiker.userId}`}>
-                    Profile
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href={`/hikers/${currentHiker.id}/hikes`}>
-                    Your Hikes
-                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/hiker">Profile</NavDropdown.Item>
+                  <NavDropdown.Item href="/hikes">Your Hikes</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
                     <Logout />
