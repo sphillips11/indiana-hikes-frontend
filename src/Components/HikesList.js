@@ -9,7 +9,19 @@ const HikesList = (props) => {
     return <HikeInfo key={hike.id} hikeData={hike} />;
   });
 
-  return <div className="container px-4 py-2">{HikesList}</div>;
+  return (
+    <>
+      {hikes.length ? (
+        <div className="container px-4 py-2">{HikesList}</div>
+      ) : (
+        <div className="">
+          <h5 className="text-center">
+            Looks like you haven't recorded any hikes yet
+          </h5>
+        </div>
+      )}
+    </>
+  );
 };
 
 export default HikesList;
