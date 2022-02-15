@@ -31,29 +31,26 @@ function App() {
     <Router>
       <Header currentHiker={currentHiker} />
       <Routes>
-        <Route path="/" element={<Parks currentHiker={currentHiker} />} />
+        <Route
+          path="/"
+          element={<Parks currentHiker={currentHiker} loggedIn={loggedIn} />}
+        />
         <Route
           path="parks/:parkName"
           element={<ParkDetails currentHiker={currentHiker} />}
         />
         <Route path="parks/:parkName/map" element={<Map />} />
-        {/* <Route path="signup" element={<SignUp />} /> */}
         <Route
           path="signup"
-          element={
-            loggedIn ? <Navigate replace to="/hikers/{hikerId}" /> : <SignUp />
-          }
+          element={loggedIn ? <Navigate replace to={`/hiker}`} /> : <SignUp />}
         />
         <Route path="login" element={<Login />} />
         <Route path="reset" element={<PasswordReset />} />
         <Route
-          path="hikers/:hikerId"
+          path="hiker"
           element={<HikerDetails currentHiker={currentHiker} />}
         />
-        <Route
-          path="hikers/:hikerId/hikes"
-          element={<Hikes currentHiker={currentHiker} />}
-        />
+        <Route path="hikes" element={<Hikes currentHiker={currentHiker} />} />
         {/* <Route
           path="hikers/:hikerId"
           element={loggedIn ? <HikerInfo /> : <Navigate replace to="/login" />}
