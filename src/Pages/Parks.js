@@ -46,7 +46,7 @@ const Parks = (props) => {
           console.log(error);
         });
     }
-  }, []);
+  }, [currentHiker, loggedIn]);
 
   return (
     <div>
