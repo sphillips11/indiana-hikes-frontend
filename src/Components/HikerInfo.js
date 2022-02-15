@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 
 const HikerInfo = (props) => {
   const hiker = props.currentHiker;
-  const formattedDate = new Date(hiker.registered).toLocaleDateString();
+  const formattedDate = new Date(hiker.createdAt).toLocaleDateString();
 
   return (
     <div>
@@ -16,7 +16,6 @@ const HikerInfo = (props) => {
       <br />
       <div className="container bg-light">
         <p>Name: {hiker.name}</p>
-        <p>Username: {hiker.username}</p>
         <p>Email: {hiker.email}</p>
         <Button href="/reset" variant="danger">
           Reset your password
