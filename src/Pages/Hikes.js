@@ -23,7 +23,7 @@ const Hikes = (props) => {
         console.log(error);
         alert("Oops! Something went wrong. Please try again later.");
       });
-  }, []);
+  }, [currentHiker]);
 
   return (
     <div className="bg-light">
