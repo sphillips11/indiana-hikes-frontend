@@ -7,7 +7,6 @@ const Parks = (props) => {
   const [parksVisited, setParksVisited] = useState(new Set());
   const currentHiker = props.currentHiker;
   const loggedIn = props.loggedIn;
-  console.log(currentHiker);
 
   useEffect(() => {
     window.scroll(0, 0);
@@ -17,7 +16,6 @@ const Parks = (props) => {
     axios
       .get(`${process.env.REACT_APP_BACKEND_URL}`)
       .then((response) => {
-        // console.log(response);
         setParksData(response.data);
       })
       .catch((error) => {
@@ -33,14 +31,11 @@ const Parks = (props) => {
           `${process.env.REACT_APP_BACKEND_URL}/hikers/${currentHiker.userId}/hikes`
         )
         .then((response) => {
-          console.log("Parks Visited: ", response.data);
           const parksVisitedSet = new Set();
           response.data.forEach((hike) => {
-            console.log("hike: ", hike.park_id.id);
             parksVisitedSet.add(hike.park_id.id);
           });
           setParksVisited(parksVisitedSet);
-          console.log("parksVisitedSet: ", parksVisitedSet);
         })
         .catch((error) => {
           console.log(error);

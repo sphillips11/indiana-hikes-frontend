@@ -18,3 +18,7 @@ iframe {
     overflow-y: auto;
     overflow-x: hidden;
 }
+
+.checkmark {
+    color: green;
+}

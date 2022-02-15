@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMap, faRoute } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMap,
+  faRoute,
+  faCheckCircle,
+} from "@fortawesome/free-solid-svg-icons";
+import "../index.css";
 
 const ParkInfo = (props) => {
   const park = props.currentPark;
+  const visited = props.visited;
   const encodedAddress = encodeURIComponent(
     `${park.street_address}, ${park.city}, ${park.state}`
   );
@@ -15,7 +21,10 @@ const ParkInfo = (props) => {
     <div>
       <section className="container.fluid bg-success p-5">
         <h1 className="text-center">
-          {/* if visited, then checkmark */}
+          {visited && (
+            <FontAwesomeIcon icon={faCheckCircle} className="checkmark" />
+          )}{" "}
+          &nbsp;&nbsp;&nbsp;
           {park.name} &nbsp;&nbsp;&nbsp; {park.accessibility && "\u267F"}
         </h1>
         <br />

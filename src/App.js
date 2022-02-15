@@ -37,7 +37,9 @@ function App() {
         />
         <Route
           path="parks/:parkName"
-          element={<ParkDetails currentHiker={currentHiker} />}
+          element={
+            <ParkDetails currentHiker={currentHiker} loggedIn={loggedIn} />
+          }
         />
         <Route path="parks/:parkName/map" element={<Map />} />
         <Route
