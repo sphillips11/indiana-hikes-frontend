@@ -11,7 +11,7 @@ const SignUp = (props) => {
   }, []);
 
   return (
-    <div className="mh-100">
+    <div>
       <br />
       <br />
       <SignupForm />
