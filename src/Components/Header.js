@@ -13,7 +13,7 @@ const Header = (props) => {
         <Navbar.Brand href="/" className="p-0 mb-0 mt-1">
           <img
             className="logo"
-            src="/images/logo_draft.png"
+            src="/images/Indiana_Hikes_logo.png"
             alt="Indiana Hikes logo"
           />
         </Navbar.Brand>
@@ -26,6 +26,7 @@ const Header = (props) => {
                   Record Hike
                 </Button>
                 <NavDropdown
+                  className="text-success"
                   title={
                     <span>
                       <img

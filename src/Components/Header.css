@@ -1,8 +1,12 @@
 .icon {height: 40px; width: 40px;}
 
-.logo {height:70px}
+.logo {height:40px}
 
 .navbar {
-    padding-top: 0 !important; 
-    padding-bottom: 0 !important;
+    padding-top: 1 !important; 
+    padding-bottom: 1 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #C5E1D4 !important;
 }
