@@ -26,15 +26,9 @@ const Hikes = (props) => {
   }, [currentHiker]);
 
   return (
-    <div className="bg-light">
-      <br />
-      <br />
-      <h1 className="text-center">Your Hikes</h1>
-      <br />
-      <br />
-      <section className="container.fluid bg-primary py-4">
-        <HikesList hikesList={hikesList} />
-      </section>
+    <div className="bg-green1 vh-100">
+      <h1 className="text-center py-5 text-green3">Your Hikes</h1>
+      <HikesList hikesList={hikesList} />
     </div>
   );
 };

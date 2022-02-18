@@ -5,6 +5,8 @@ import {
   faMap,
   faRoute,
   faCheckCircle,
+  faPhone,
+  faEarthAfrica,
 } from "@fortawesome/free-solid-svg-icons";
 import "../index.css";
 
@@ -18,54 +20,90 @@ const ParkInfo = (props) => {
     "https://www.google.com/maps/search/?api=1&query=" + encodedAddress;
 
   return (
-    <div>
-      <section className="container.fluid bg-success p-5">
-        <h1 className="text-center">
-          {visited && (
-            <FontAwesomeIcon icon={faCheckCircle} className="checkmark" />
-          )}{" "}
-          &nbsp;&nbsp;&nbsp;
-          {park.name} &nbsp;&nbsp;&nbsp; {park.accessibility && "\u267F"}
-        </h1>
-        <br />
-        <p>
-          {park.street_address}
-          <br />
-          {park.city}, {park.state} {park.zip}
-        </p>
-        <p>
-          <em>{park.note}</em>
-        </p>
-        <p>
-          <a href={`tel:${park.phone}`}>{park.phone}</a>
-        </p>
-        <p>
-          <a href={park.website} target="_blank" rel="noopener noreferrer">
-            Park Website
-          </a>
-        </p>
-        <p>
-          <a href={mapsSearchUrl} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faRoute} /> Directions (in GoogleMaps)
-          </a>
-        </p>
-        <p>
-          <Link to={"map"} target="_blank">
-            <FontAwesomeIcon icon={faMap} /> Trail Map
-          </Link>
-        </p>
-        <p>{park.challenge && `\u2605 ${park.challenge_name}`}</p>
+    <div className="bg-green1">
+      <h1 className="text-center pt-5 pb-2">
+        {visited && (
+          <FontAwesomeIcon icon={faCheckCircle} className="text-green2" />
+        )}{" "}
+        &nbsp;&nbsp;&nbsp;
+        <span className="text-green3">{park.name}</span> &nbsp;&nbsp;&nbsp;{" "}
+        {park.accessibility && "\u267F"}
+      </h1>
+      <br />
+      <section className="container mx-5 mb-5">
+        <div className="row justify-content-evenly">
+          <div className="col-sm-6 col-md-4 col-lg-3">
+            <p className="text-green2">
+              {park.street_address}
+              <br />
+              {park.city}, {park.state} {park.zip}
+            </p>
+            <p>
+              <em>{park.note}</em>
+            </p>
+            <p>
+              <a
+                href={`tel:${park.phone}`}
+                className="text-decoration-none text-green2"
+              >
+                <FontAwesomeIcon icon={faPhone} /> {park.phone}
+              </a>
+            </p>
+
+            <p>
+              <a
+                href={park.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none text-green2"
+              >
+                <FontAwesomeIcon icon={faEarthAfrica} /> &nbsp;Park Website
+              </a>
+            </p>
+          </div>
+          <div className="col-sm-6 col-md-4 col-lg-3">
+            <p>
+              <a
+                href={mapsSearchUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none text-green2"
+              >
+                <FontAwesomeIcon icon={faRoute} /> &nbsp;Directions (GoogleMaps)
+              </a>
+            </p>
+            <p>
+              <Link
+                to={"map"}
+                target="_blank"
+                className="text-decoration-none text-green2"
+              >
+                <FontAwesomeIcon icon={faMap} /> &nbsp;Trail Map
+              </Link>
+            </p>
+
+            {park.challenge && (
+              <p>
+                <span className="text-warning fs-5">{`\u2605`} </span>
+                <span className="text-green2">{park.challenge_name}</span>
+              </p>
+            )}
+          </div>
+        </div>
       </section>
-      <section className="container.fluid bg-info p-5">
-        <h5>Description</h5>
-        <p>{park.description}</p>
+      <section className="container.fluid bg-green2 text-green1 p-5">
+        <h5 className="mx-4">Description</h5>
+        <p className="mx-4">{park.description}</p>
+        {park.challenge && (
+          <section className="container.fluid rounded bg-warning text-green3 p-5 m-5 ">
+            <h5>
+              <span>{`\u2605 `}</span>
+              {park.challenge_name}
+            </h5>
+            <p>{park.challenge_description}</p>
+          </section>
+        )}
       </section>
-      {park.challenge && (
-        <section className="container.fluid bg-warning p-5">
-          <h5>{park.challenge_name}</h5>
-          <p>{park.challenge_description}</p>
-        </section>
-      )}
     </div>
   );
 };

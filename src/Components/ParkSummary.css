@@ -1,3 +1,27 @@
-/* .list-group-item {
-    background-color:  ;
-} */
+link:visited {
+    text-decoration: none;
+}
+
+link:hover {
+    text-decoration: none;
+}
+
+.badges {
+    margin-top: 0!important;
+}
+
+.card {
+    max-width: 260px;
+}
+
+.checkmark {
+    text-align: right!important;
+}
+
+.list-group-item {
+    background-color: #E9F3ED!important;
+    color: #24794B!important;
+    border:0!important;
+    padding-top:2px !important;
+    padding-bottom:2px !important;
+}

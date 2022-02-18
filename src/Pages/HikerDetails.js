@@ -9,7 +9,7 @@ const HikerDetails = (props) => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-green1 vh-100">
       <HikerInfo currentHiker={currentHiker} />
     </div>
   );

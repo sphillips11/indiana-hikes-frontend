@@ -11,9 +11,7 @@ const Login = (props) => {
   }, []);
 
   return (
-    <div>
-      <br />
-      <br />
+    <div className="pt-5 bg-green1 vh-100">
       <LoginForm />
     </div>
   );

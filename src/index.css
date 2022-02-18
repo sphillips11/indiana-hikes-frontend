@@ -1,3 +1,7 @@
+Form {
+    max-width: 450px;
+}
+
 html {
     overflow: auto;
 }
@@ -19,6 +23,34 @@ iframe {
     overflow-x: hidden;
 }
 
-.checkmark {
-    color: green;
+.bg-green1 {
+    background-color: #E9F3ED!important;
+}
+
+.bg-green2 {
+    background-color: #24794B!important;
+}
+
+.bg-green3 {
+    background-color: #07180F!important;
+}
+
+.border-green3 {
+    border-color: #07180F!important;
+}
+
+.border-green2 {
+    border-color: #24794B!important;
+}
+
+.text-green1 {
+    color: #E9F3ED!important;
+}
+
+.text-green2 {
+    color: #24794B!important;
+}
+
+.text-green3 {
+    color: #07180F!important;
 }

@@ -11,9 +11,7 @@ const PasswordReset = () => {
   }, []);
 
   return (
-    <div>
-      <br />
-      <br />
+    <div className="mt-5">
       <PasswordResetForm />
     </div>
   );

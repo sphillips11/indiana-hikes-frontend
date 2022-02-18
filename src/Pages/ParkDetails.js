@@ -82,13 +82,14 @@ const ParkDetails = (props) => {
 
   return (
     <div>
-      <section className="container.fluid">
+      <section className="container.fluid ">
         <ParkInfo
           currentPark={currentPark}
           visited={parksVisited.has(currentPark.id)}
         />
       </section>
-      <section className="container.fluid bg-primary py-4">
+      <section className="container.fluid bg-green1 py-4">
+        <h3 className="text-center text-green3 mt-4">Trails</h3>
         <TrailsList
           currentTrails={currentTrails}
           trailsVisited={trailsVisited}

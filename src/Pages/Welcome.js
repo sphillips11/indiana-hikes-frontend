@@ -24,13 +24,10 @@ const Welcome = () => {
   });
 
   return (
-    <div className="text-center">
-      <br />
-      <br />
-      <h1>Welcome, {currentHiker.name}!</h1>
+    <div className="text-center pt-5 bg-green1 text-green3 vh-100">
+      <h1 className="text-center pt-5">Welcome, {currentHiker.name}!</h1>
       <h4>We're glad you're here.</h4>
-      <br />
-      <Button href="/" variant="warning">
+      <Button href="/" variant="warning" className="mt-5 text-green3">
         Explore!
       </Button>
     </div>

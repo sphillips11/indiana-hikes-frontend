@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import axios from "axios";
 import ParksList from "../Components/ParksList";
+import "../index.css";
 
 const Parks = (props) => {
   const [parksData, setParksData] = useState([]);
@@ -44,8 +45,11 @@ const Parks = (props) => {
   }, [currentHiker, loggedIn]);
 
   return (
-    <div>
-      <h1 className="text-center">Indiana State Parks</h1>
+    <div className="bg-green1 mb-5">
+      <h1 className="text-center pt-5 pb-4 text-green2">
+        Explore Indiana Trails
+      </h1>
+      <h3 className="text-center text-green3">Indiana State Parks</h3>
       <section className="container">
         <ParksList parksData={parksData} parksVisited={parksVisited} />
       </section>

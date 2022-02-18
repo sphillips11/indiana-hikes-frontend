@@ -3,6 +3,7 @@ import { Accordion } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import "./TrailInfo.css";
+import "../index.css";
 
 const TrailInfo = (props) => {
   const trail = props.trailData;
@@ -27,9 +28,10 @@ const TrailInfo = (props) => {
                 </p>
               </div>
               <div className="col-md-4">
-                <span className="badge rounded-pill bg-primary">
-                  {trail.rating}{" "}
+                <span className="badge rounded-pill bg-green1 text-green2">
+                  {trail.rating}
                 </span>
+                <span>&nbsp;&nbsp;{trail.accessible && "\u267F"}</span>
                 <span>
                   &nbsp;&nbsp;&nbsp;
                   {trail.distance} {trail.distance === "1" ? "mile" : "miles"}
@@ -38,7 +40,9 @@ const TrailInfo = (props) => {
             </div>
           </div>
         </Accordion.Header>
-        <Accordion.Body>{trail.description}</Accordion.Body>
+        <Accordion.Body className="text-green3">
+          {trail.description}
+        </Accordion.Body>
       </Accordion.Item>
     </Accordion>
   );
